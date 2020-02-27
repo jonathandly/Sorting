@@ -23,8 +23,17 @@ print(selection_sort(l2))
 # TO-DO:  implement the Bubble Sort function below
 def bubble_sort( arr ):
 
+    for i in range(len(arr)):
+        for j in range(0, len(arr) - 1):
+            if arr[j] > arr[j+1]:
+                arr[j], arr[j+1] = arr[j+1], arr[j]
     return arr
 
+
+b = [801, 1111, 26, 924, 1, 0, 214, 43, 201]
+print(bubble_sort(b))
+b2 = ['e','X','h','N','a','A','w','R','q']
+print(bubble_sort(b2))
 
 # STRETCH: implement the Count Sort function below
 def count_sort( arr, maximum=-1 ):
