@@ -25,8 +25,16 @@ print(merge([1,2,3,4,5],[6,7,8,9,10]))
 # TO-DO: implement the Merge Sort function below USING RECURSION
 def merge_sort( arr ):
     # TO-DO
+    if len(arr) <= 1:
+        return arr
 
-    return arr
+    middle = int(len(arr) // 2)
+    left, right = merge_sort(arr[:middle]), merge_sort(arr[middle:])
+
+    return merge(left,right)
+
+print(merge_sort([5,4,3,2,1]))
+print(merge_sort([3011,593,65,0,-32,-205,138,13]))
 
 
 # STRETCH: implement an in-place merge sort algorithm
